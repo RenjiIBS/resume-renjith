@@ -10,13 +10,6 @@
 </head>
 <script>
 // Dark mode toggle stays
-const toggle = document.getElementById('modeToggle');
-toggle.onclick = () => {
-  document.body.classList.toggle('dark');
-  toggle.textContent = document.body.classList.contains('dark')
-    ? '☀️ Light Mode'
-    : '🌙 Dark Mode';
-};
 
 // Highlight FIRST job entry (current job)
 document.addEventListener("DOMContentLoaded", () => {
