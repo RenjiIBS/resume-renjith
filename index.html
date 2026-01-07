@@ -45,12 +45,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const events = document.querySelectorAll('.timeline .event');
   if(events.length > 0) {
     const first = events[0];
-    first.classList.add('current-role');
+    first.classList.add('current-Project');
 
     // Add label tag
     const badge = document.createElement('span');
     badge.className = 'current-tag';
-    badge.innerText = 'Current Role';
+    badge.innerText = 'Current Project';
+    first.prepend(badge);
+  }
+   const orgevents = document.querySelectorAll('.org-timeline .org-event');
+  if(orgevents.length > 0) {
+    const first = orgevents[0];
+    first.classList.add('current-Project');
+
+    // Add label tag
+    const badge = document.createElement('span');
+    badge.className = 'current-tag';
+    badge.innerText = 'Current organization';
     first.prepend(badge);
   }
 });
