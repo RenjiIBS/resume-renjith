@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renjith K Narayanan - Resume</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<script>
+// Dark mode toggle stays
+const toggle = document.getElementById('modeToggle');
+toggle.onclick = () => {
+  document.body.classList.toggle('dark');
+  toggle.textContent = document.body.classList.contains('dark')
+    ? '☀️ Light Mode'
+    : '🌙 Dark Mode';
+};
+
+// Highlight FIRST job entry (current job)
+document.addEventListener("DOMContentLoaded", () => {
+  const events = document.querySelectorAll('.timeline .event');
+  if(events.length > 0) {
+    const first = events[0];
+    first.classList.add('current-role');
+
+    // Add label tag
+    const badge = document.createElement('span');
+    badge.className = 'current-tag';
+    badge.innerText = 'Current Role';
+    first.prepend(badge);
+  }
+});
+</script>
+
+<body>
+
+<div class="sidebar">
+    <div class="profile-pic">
+        <img src="RenjithPhoto.jpeg" alt="Renjith K Narayanan">
+    </div>
+    <h2>Renjith K Narayanan</h2>
+    <h3>Lead Technical Architect</h3>
+    <p><i class="fa-solid fa-envelope"></i>
+        <a href="mailto:renjithkn@gmail.com">renjithkn@gmail.com</a></p>
+    <p><i class="fa-solid fa-phone"></i> 9747001106</p>
+ <div class="social-icons">
+  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" title="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+  <a href="https://www.youtube.com/@YOURCHANNEL" target="_blank" title="YouTube">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+  <a href="https://github.com/YOUR-GITHUB" target="_blank" title="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+  <a href="#" onclick="window.print()" title="Download PDF">
+    <i class="fa-solid fa-file-arrow-down"></i>
+  </a>
+</div>
+
+    <button id="modeToggle">🌙 Dark Mode</button>
+    
+</div>
+
+<div class="content">
+
+    <!-- Profile -->
+    <section class="card">
+        <h3><i class="fa-solid fa-user-tie"></i> Profile Summary</h3>
+        <p>Experienced Technical Architect with 20+ years in enterprise engineering,
+           product architecture, cloud modernization, blockchain, Gen AI ,DevOps,
+           and digital transformation across verticles like Airport, Airline, Travel, Healthcare,
+           AND Telecom .</p>
+    </section>
+
+    <!-- Skills -->
+    <section class="card">
+        <h3><i class="fa-solid fa-gears"></i> Skills Summary</h3>
+        <ul>
+            <li>Enterprise / Cloud Architecture</li>
+            <li>Java / J2EE / Spring / Microservices</li>
+            <li>Blockchain — Hyperledger / Ethereum</li>
+            <li>React, Node, Kafka, Spark, AWS/Azure</li>
+            <li>Team Mentoring & Tech Leadership</li>
+            <li>Performance Engineering, Code Reviews</li>
+            <li>API Integration, DLT & Data Pipelines</li>
+        </ul>
+    </section>
+
+    <section class="card">
+    <h3><i class="fa-solid fa-building"></i> Organization Timeline</h3>
+    <div class="org-timeline">
+
+        <div class="org-event">
+            <div class="org-year">2017 – Present</div>
+            <h4>IBS Software Ltd – India</h4>
+            <p>Architect roles across AODB, ATM, Cargo automation,
+               Blockchain, NLP and cloud-native engineering.</p>
+        </div>
+
+        <div class="org-event">
+            <div class="org-year">2011 – 2016</div>
+            <h4>UST Global – India</h4>
+            <p>Tech lead & architect on GE Transportation projects —
+               Fuel Optimization, UTCS, RMD/EOA.</p>
+        </div>
+
+        <div class="org-event">
+            <div class="org-year">2008 – 2011</div>
+            <h4>SHC Informatics – Kuwait</h4>
+            <p>Hospital Management & Clinical Information Systems —
+               pharmacy, radiology, HR, billing, EMR.</p>
+        </div>
+
+        <div class="org-event">
+            <div class="org-year">2005 – 2008</div>
+            <h4>IBM Global Services – India</h4>
+            <p>Enterprise development for Sprint Commissions and
+               IBM ePricer for global quoting and delegation.</p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- TIMELINE -->
+    <section class="card timeline-card">
+        <h3><i class="fa-solid fa-clock"></i> Featured Project Timeline</h3>
+        <div class="timeline">
+
+            <!-- Timeline item -->
+            <div class="event">
+                <div class="event-year">2022–Present</div>
+                <div class="event-dot"></div>
+                <div class="event-content">
+                    <h4>Airport AODB </h4>
+                    <p>Product innovation & modernization for airport management:
+                       Spring Boot,Python,K8,Docker,Postgres, Kafka, EKS, React, Spark, AWS, EFK.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-year">2020–2022</div>
+                <div class="event-dot"></div>
+                <div class="event-content">
+                    <h4>Flight2Plan — Blockchain ATM</h4>
+                    <p>DLT-based air traffic coordination and decentralized DID identity:
+                       Hyperledger Fabric, Azure AKS, Aries, RabbitMQ, Golang, Node.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-year">2019</div>
+                <div class="event-dot"></div>
+                <div class="event-content">
+                    <h4>Claim Automation </h4>
+                    <p>Automated claim processing . Spring Boot, Camel, UI Path,AWS ECS,
+                       Postgres and AWS CloudWatch .</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-year">2018–2019</div>
+                <div class="event-dot"></div>
+                <div class="event-content">
+                    <h4>Cargo Mail Bot — NLP & AI</h4>
+                    <p>Natural language booking assistant: AWS Lambda, SQS, EventBridge,
+                       DynamoDB, Python, Java microservices.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-year">2018</div>
+                <div class="event-dot"></div>
+                <div class="event-content">
+                    <h4>Productized Services</h4>
+                    <p>Created reusable frameworks that powered IBS product portfolio.
+                       Conducted R&D, tech debt resolution, customer demos.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-year">2017</div>
+                <div class="event-dot"></div>
+                <div class="event-content">
+                    <h4>JTB B2C IBE Web Portal</h4>
+                    <p>Online travel booking engine  for JTB Japan.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-year">2011–2016</div>
+                <div class="event-dot"></div>
+                <div class="event-content">
+                    <h4>Fuel Optimization & UTCS — GE Transportation</h4>
+                    <p>KPI dashboards, map analytics, PCF microservices,
+                       Spring stack, Angular frontends.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-year">2008–2011</div>
+                <div class="event-dot"></div>
+                <div class="event-content">
+                    <h4>SHC Hospital Information System</h4>
+                    <p>Clinical, billing, pharmacy, radiology, HR, accounts modules.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-year">2005–2008</div>
+                <div class="event-dot"></div>
+                <div class="event-content">
+                    <h4>IBM Sprint & ePricer</h4>
+                    <p>Telecom commission automation & pricing/approval systems.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="card">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Education & Certifications</h3>
+        <ul>
+            <li>MSc Information Technology – MG University</li>
+            <li>BCA – MG University</li>
+            <li>AWS Solutions Architect</li>
+            <li>Azure Administrator</li>
+            <li>UiPath RPA Developer</li>
+            <li>Hyperledger & Ethereum – KBA</li>
+        </ul>
+    </section>
+
+</div>
+
+<script>
+const toggle = document.getElementById('modeToggle');
+toggle.onclick = () => {
+    document.body.classList.toggle('dark');
+    toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
+};
+</script>
+
+</body>
+</html>
