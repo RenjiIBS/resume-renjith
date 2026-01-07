@@ -308,3 +308,62 @@ body {
     margin-top: 6px;
 }
 @media print { .qr-box { display:none!important; } }
+/******** DARK MODE TOGGLE SWITCH ********/
+.switch {
+    position: relative;
+    width: 60px;
+    height: 28px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    background: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    inset: 0;
+    transition: background .3s ease;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 2px;
+    left: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: transform .3s ease;
+}
+
+/* Sun + Moon icons inside slider */
+.sun,
+.moon {
+    position: absolute;
+    font-size: 13px;
+    top: 7px;
+    transition: opacity .3s ease;
+}
+
+.sun { left: 8px;  opacity: 1; }
+.moon { right: 8px; opacity: 0; }
+
+/* CHECKED ---> DARK MODE */
+.switch input:checked + .slider {
+    background: var(--accent);
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(32px);
+}
+
+.switch input:checked + .slider .sun { opacity: 0; }
+.switch input:checked + .slider .moon { opacity: 1; }
